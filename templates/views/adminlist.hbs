@@ -1,0 +1,32 @@
+<body>
+    <div class="col-md-6 offset-md-3" style="background-color: rgb(239, 244, 247);margin-top: 25px;padding:20px;">
+        {{>mainLayout}}
+</body>
+<h3><a class="btn btn-secondary" href="/employee/admin"><i ></i> View</a> Employee List</h3>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Full Name</th>
+            <th>Email</th>
+            <th>Mobile</th>
+            <th>City</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each list}}
+        <tr>
+            <td>{{this.fullName}}</td>
+            <td>{{this.email}}</td>
+            <td>{{this.mobile}}</td>
+            <td>{{this.city}}</td>
+            <td>
+                <a href="/employee/delete/{{this._id}}" onclick="return confirm('Are you sure to delete this record ?');"><i class="fa fa-trash fa-lg" aria-hidden="true"></i></a>
+
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
+</body>
+</div>
