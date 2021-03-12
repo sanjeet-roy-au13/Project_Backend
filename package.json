@@ -5,13 +5,11 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "babel-watch ./src/Throwns.js",
+    "dev": "nodemon src/app.js -e js,hbs",
+    "start":"node src/app.js -e js,hbs ",
     "clean": "rimraf dist && mkdir dist",
     "babel-build": "babel -d ./dist ./src -s",
-    "build": "npm run clean && npm run babel-build",
-    "form": "babel-watch ./src/form.js",
-    "auth": "babel-watch ./src/authentication.js",
-    "seed": "babel-watch ./src/mongo.js"
+    "build": "npm run clean && npm run babel-build"
   },
   "keywords": [],
   "author": "",
