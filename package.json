@@ -2,16 +2,29 @@
   "name": "UserManagementsystem",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon src/app.js -e js,hbs",
-    "start":"node src/app.js -e js,hbs "
+    "start": "babel-watch ./src/Throwns.js",
+    "clean": "rimraf dist && mkdir dist",
+    "babel-build": "babel -d ./dist ./src -s",
+    "build": "npm run clean && npm run babel-build",
+    "form": "babel-watch ./src/form.js",
+    "auth": "babel-watch ./src/authentication.js",
+    "seed": "babel-watch ./src/mongo.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@babel/cli": "^7.12.10",
+    "@babel/core": "^7.12.10",
+    "@babel/node": "^7.12.10",
+    "@babel/plugin-proposal-class-properties": "^7.12.1",
+    "@babel/polyfill": "^7.12.1",
+    "@babel/preset-env": "^7.12.11",
+    "babel-polyfill": "^6.26.0",
+    "babel-watch": "^7.0.0",
     "bcryptjs": "^2.4.3",
     "express": "^4.17.1",
     "express-handlebars": "^5.2.1",
@@ -19,6 +32,8 @@
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.10.15",
     "nodemailer": "^6.5.0",
-    "nodemon": "^2.0.7"
+    "nodemon": "^2.0.7",
+    "isomorphic-fetch": "^3.0.0",
+    "rimraf": "^3.0.2"
   }
 }
