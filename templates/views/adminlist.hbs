@@ -1,5 +1,39 @@
 <body>
-    {{>navbar}}
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+        <a class="navbar-brand text-white" href="/">User Manager</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="/login">Logout</a>
+                </li>
+                
+            </ul>
+
+        </div>
+    </div>
+</nav>
+<header style="background:url(https://images.pexels.com/photos/3618480/pexels-photo-3618480.jpeg?cs=srgb&dl=pexels-frank-cone-3618480.jpg&fm=jpgauto=compress&cs=tinysrgb&dpr=2&h=650&w=940);    background-size: cover;
+    background-position: center; ">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="te text-center text-white">
+                    <h1>Welcome to User Management System</h1>
+                    <p>Easy Way To Manage</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
     <div class="col-md-6 offset-md-3" style="background-color: rgb(239, 244, 247);margin-top: 25px;padding:20px;">
         {{>mainLayout}}
 </body>
